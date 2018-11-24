@@ -14,7 +14,7 @@ var app = express();
 // app.use(express.static(__dirname + '/../node_modules'));
 
 app.get('/', function (req, res) {
-	res.sendStatus(200)
+	//res.sendStatus(200)
 	res.send("<h1>Hi</h1>")
 });
 
