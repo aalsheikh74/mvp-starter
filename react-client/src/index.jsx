@@ -9,7 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = { 
       items: [],
-      ren: 0,
+      pageRender: 0,
     }
 
     this.pageRender = this.pageRender.bind(this);
@@ -30,9 +30,10 @@ class App extends React.Component {
     });
   }
 
-  pageRender() {
+  pageRender(e) {
     console.log("pageID", 1)
-   
+    console.log(e.target.value)
+    this.setState({ren: 1});
   }
 
   render () {
@@ -40,13 +41,13 @@ class App extends React.Component {
       
       <div>
         <div><h1>Home | About | List Item | Add Item | Search for Item | Login | Signup</h1></div>
-        <button className="btn" onClick={function(){this.setState({ren: 2}); console.log("home!", this.ren)}}>Home </button>
-        <button className="btn" onClick={function(){this.pageRender}}>About </button>
-        <button className="btn" onClick={function(){console.log("List Item!")}}>List Item </button>
-        <button className="btn" onClick={function(){console.log("Add Item!")}}>Add Item </button>
-        <button className="btn" onClick={function(){console.log("Search for Item!")}}>Search for Item </button>
-        <button className="btn" onClick={function(){console.log("Login!")}}>Login </button>
-        <button className="btn" onClick={function(){console.log("Signup!")}}>Signup </button>  
+        <button className="btn" value='0' onClick={this.pageRender  }>Home </button>
+        <button className="btn" value='1' onClick={this.pageRender  }>About </button>
+        <button className="btn" value='2' onClick={this.pageRender  }>List Item </button>
+        <button className="btn" value='3' onClick={this.pageRender  }>Add Item </button>
+        <button className="btn" value='4' onClick={this.pageRender  }>Search for Item </button>
+        <button className="btn" value='5' onClick={this.pageRender  }>Login </button>
+        <button className="btn" value='6' onClick={this.pageRender  }>Signup </button>  
       </div>
       <h1>Item List</h1>
       <List items={this.state.items}/>
