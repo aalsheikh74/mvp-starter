@@ -13,6 +13,12 @@ var app = express();
 // app.use(express.static(__dirname + '/../angular-client'));
 // app.use(express.static(__dirname + '/../node_modules'));
 
+app.get('/', function (req, res) {
+	res.sendStatus(200)
+	res.send("<h1>Hi</h1>")
+});
+
+
 app.get('/items', function (req, res) {
   items.selectAll(function(err, data) {
     if(err) {
