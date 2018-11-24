@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import List from './components/List.jsx';
+import MainMenu from './components/MainMenu.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends React.Component {
 
   render () {
     return (<div>
+      <MainMenu />
       <h1>Item List</h1>
       <List items={this.state.items}/>
     </div>)
