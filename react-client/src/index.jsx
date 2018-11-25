@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import MainMenu from './components/MainMenu.jsx';
+// import MainMenu from './components/MainMenu.jsx';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import List from './components/List.jsx';

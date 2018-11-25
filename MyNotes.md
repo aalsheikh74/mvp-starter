@@ -17,9 +17,6 @@ https://immense-harbor-20091.herokuapp.com/
 
 
 
+https://github.com/alsheikh813/mvp-starter
 
-
-
-<button className="btn" onClick={function(){this.setState({ren: 2}); console.log("home!", this.ren)}}>Home </button>
-        <button className="btn" onClick={this.pageRender}>About </button>
 
